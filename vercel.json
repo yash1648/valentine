@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "buildCommand": "cd proposal-app && npm ci && npm run build",
+  "outputDirectory": "proposal-app/dist",
   "framework": "vite",
   "headers": [
     {

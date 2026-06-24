@@ -42,14 +42,15 @@ Then open `http://localhost:5173` in your browser.
 
 This project is ready for one-click deploy on Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/valentine)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/valentine&root-directory=proposal-app)
 
 **Or manually:**
 ```bash
-# Vercel automatically detects the vercel.json config
-# and builds from proposal-app/
+# Vercel reads vercel.json at repo root and builds from proposal-app/
 npx vercel --prod
 ```
+
+> **Note:** If deploying via Git import, set **Root Directory** to `proposal-app/` in your Vercel project settings (Settings → General → Root Directory).
 
 ---
 
@@ -71,7 +72,8 @@ valentine/
 │   │   └── og-image.svg              # Social preview image
 │   ├── index.html
 │   └── package.json
-├── index.html                 # Root redirect → proposal-app
+├── vercel.json                # Vercel deployment config
+├── index.html                 # Root redirect → built app
 └── README.md
 ```
 
