@@ -71,7 +71,6 @@ valentine/
 │   │   └── og-image.svg              # Social preview image
 │   ├── index.html
 │   └── package.json
-├── vercel.json                # Vercel deployment config
 ├── index.html                 # Root redirect → proposal-app
 └── README.md
 ```

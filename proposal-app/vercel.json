@@ -1,6 +1,4 @@
 {
-  "name": "valentine",
-  "rootDirectory": "proposal-app",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
@@ -26,13 +24,6 @@
           "value": "DENY"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/",
-      "permanent": true
     }
   ]
 }
