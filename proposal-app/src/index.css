@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+/* =============================================
+   Custom theme — Tailwind CSS v4
+   (replaces v3-style tailwind.config.js)
+   ============================================= */
+
+@theme {
+  /* --- Colors --- */
+  --color-surface-variant: #353534;
+  --color-on-primary: #5f1410;
+  --color-primary-container: #4a0404;
+  --color-tertiary: #fcb3be;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container: #201f1f;
+  --color-secondary-fixed: #ffdad4;
+  --color-inverse-surface: #e5e2e1;
+  --color-on-surface-variant: #dcc0bd;
+  --color-surface-dim: #131313;
+  --color-error-container: #93000a;
+  --color-background: #131313;
+  --color-outline: #a38b88;
+  --color-outline-variant: #554240;
+  --color-on-secondary-container: #ff9a8a;
+  --color-on-tertiary: #50212b;
+  --color-surface-bright: #3a3939;
+  --color-surface-container-highest: #353534;
+  --color-tertiary-container: #3e121c;
+  --color-surface-container-high: #2a2a2a;
+  --color-secondary: #ffb4a8;
+  --color-on-tertiary-fixed: #360c17;
+  --color-on-secondary-fixed: #410000;
+  --color-on-secondary: #690000;
+  --color-on-error-container: #ffdad6;
+  --color-tertiary-fixed-dim: #fcb3be;
+  --color-on-tertiary-container: #b77781;
+  --color-secondary-fixed-dim: #ffb4a8;
+  --color-error: #ffb4ab;
+  --color-surface-container-low: #1c1b1b;
+  --color-primary: #ffb4aa;
+  --color-secondary-container: #920703;
+  --color-surface: #131313;
+  --color-on-background: #e5e2e1;
+  --color-on-error: #690005;
+  --color-on-primary-fixed: #410001;
+  --color-tertiary-fixed: #ffd9de;
+  --color-inverse-primary: #9d4139;
+  --color-surface-tint: #ffb4aa;
+  --color-on-surface: #e5e2e1;
+  --color-on-primary-fixed-variant: #7e2b23;
+  --color-on-primary-container: #d26a5f;
+  --color-primary-fixed: #ffdad5;
+  --color-on-secondary-fixed-variant: #920703;
+  --color-inverse-on-surface: #313030;
+  --color-primary-fixed-dim: #ffb4aa;
+  --color-on-tertiary-fixed-variant: #6b3741;
+
+  /* --- Spacing --- */
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1200px;
+  --spacing-margin-desktop: 64px;
+  --spacing-section-gap: 128px;
+  --spacing-unit: 8px;
+  --spacing-margin-mobile: 20px;
+
+  /* --- Fonts --- */
+  --font-headline-md: "Playfair Display", serif;
+  --font-headline-lg-mobile: "Playfair Display", serif;
+  --font-body-md: "DM Sans", sans-serif;
+  --font-body-lg: "DM Sans", sans-serif;
+  --font-label-md: "DM Sans", sans-serif;
+  --font-label-sm: "DM Sans", sans-serif;
+  --font-headline-xl: "Playfair Display", serif;
+  --font-headline-lg: "Playfair Display", serif;
+
+  /* --- Font Sizes --- */
+  --text-headline-md: 32px;
+  --text-headline-lg-mobile: 32px;
+  --text-body-md: 16px;
+  --text-body-lg: 18px;
+  --text-label-md: 14px;
+  --text-label-sm: 12px;
+  --text-headline-xl: 64px;
+  --text-headline-lg: 48px;
+}
+
+/* =============================================
+   Base Styles
+   ============================================= */
+body {
+  background-color: #131313;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* =============================================
+   Utility Classes
+   ============================================= */
+
+/* Glassmorphism panel */
+.glass-panel {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(74, 4, 4, 0.2);
+}
+
+/* Spotlight glow effect */
+.spotlight-glow {
+  background: radial-gradient(circle at center, rgba(255, 182, 193, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Particle styles */
+.particle {
+  position: absolute;
+  background: #ffb6c1;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.3;
+  filter: blur(1px);
+}
+
+/* =============================================
+   Animations
+   ============================================= */
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+}
+
+/* Soft pulse */
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Shimmer for the YES button */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Card float */
+@keyframes float-card {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* =============================================
+   Reduced Motion
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

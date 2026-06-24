@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF69B4"/>
+      <stop offset="100%" stop-color="#FF1493"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path
+    d="M50 88 C 50 88, 10 60, 10 35 C 10 20, 25 12, 35 20 C 42 26, 48 35, 50 40 C 52 35, 58 26, 65 20 C 75 12, 90 20, 90 35 C 90 60, 50 88, 50 88Z"
+    fill="url(#heartGrad)"
+    filter="url(#glow)"
+  />
+</svg>
